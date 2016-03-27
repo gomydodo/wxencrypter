@@ -1,10 +1,5 @@
 package wechat
 
-import (
-	"encoding/xml"
-	"fmt"
-)
-
 type encrypter struct {
 	prpcrypter     *Prpcrypt
 	token          string
