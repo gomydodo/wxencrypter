@@ -39,11 +39,12 @@
 微信服务器请求时在url上增加参数：msg_signature
 
 
-|- 参数 -|- 说明 -|
-|- Token -|- 公众平台上，开发者设置的Token -|
-|- timestamp -|- URL上原有参数，时间戳 -|
-|- nonce -|- URL上原有参数，随机数 -|
-|- msg_encrypt -|- 前文描述密文消息体 -|
+| 参数 | 说明  |
+| :-------- | ----------: |
+|  Token  | 公众平台上，开发者设置的Token |
+|  timestamp  | URL上原有参数，时间戳 |
+|  nonce | URL上原有参数，随机数 |
+|  msg_encrypt | 前文描述密文消息体 |
 
 
 ### 回复消息体的签名与加密
