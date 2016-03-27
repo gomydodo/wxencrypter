@@ -12,7 +12,7 @@
 		timestamp := "1409304348"
 		nonce := "xxxxxx"
 		appId := "wxb11529c136998cb6"
-		ttext := `<xml>
+		text := `<xml>
 		<ToUserName><![CDATA[oia2Tj我是中文jewbmiOUlr6X-1crbLOvLw]]></ToUserName>
 		<FromUserName><![CDATA[gh_7f083739789a]]></FromUserName>
 		<CreateTime>1407743423</CreateTime>
