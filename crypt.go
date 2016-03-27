@@ -1,4 +1,4 @@
-package wechat
+package wxencrypter
 
 type encrypter struct {
 	prpcrypter     *Prpcrypt

@@ -1,4 +1,4 @@
-package wechat
+package wxencrypter
 
 import (
 	"crypto/sha1"
