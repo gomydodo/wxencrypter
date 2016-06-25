@@ -18,7 +18,7 @@ func NewEncrypter(token, encodingAesKey, appId string) (e *Encrypter, err error)
 		return
 	}
 
-	p, err := newPrpcrypt(encodingAesKey)
+	p, err := NewPrpcrypt(encodingAesKey)
 	if err != nil {
 		return
 	}

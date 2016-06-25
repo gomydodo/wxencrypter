@@ -15,7 +15,7 @@ type Prpcrypt struct {
 	Encoder PKCS7Encoder
 }
 
-func newPrpcrypt(key string) (p *Prpcrypt, err error) {
+func NewPrpcrypt(key string) (p *Prpcrypt, err error) {
 	b, err := base64.StdEncoding.DecodeString(key + "=")
 	if err != nil {
 		err = DecodeBase64Error
@@ -107,9 +107,11 @@ func (p *Prpcrypt) random() (b []byte) {
 	src := []byte("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz")
 	n := len(src)
 	buf := &bytes.Buffer{}
+
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
+
 	for i := 0; i < 16; i += 1 {
-		rand.Seed(time.Now().UnixNano())
-		index := rand.Intn(n)
+		index := r.Intn(n)
 		buf.WriteByte(src[index])
 	}
 	b = buf.Bytes()

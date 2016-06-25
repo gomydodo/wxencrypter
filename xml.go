@@ -26,6 +26,14 @@ func ParseRequestXML(data []byte) (e EncryptedRequestXML, err error) {
 	return
 }
 
+func ParseResponseXML(data []byte) (e EncryptedResponseXML, err error) {
+	err = xml.Unmarshal(data, &e)
+	if err != nil {
+		err = ParseXmlError
+	}
+	return
+}
+
 func GenerateResponseXML(encrypt, signature, timestamp, nonce string) (b []byte, err error) {
 	e := EncryptedResponseXML{
 		Nonce:        nonce,
